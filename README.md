@@ -14,7 +14,7 @@
 
 ## About
 
-This repository contains a solution to the final task in the Soft Skills discipline for the university. Made in Python together with .
+This repository contains a solution to the final task in the Soft Skills discipline for the university. Made in Python together with Em4lia.
 
 ## Built with
 
@@ -23,7 +23,7 @@ This repository contains a solution to the final task in the Soft Skills discipl
 ## Authors
 
 - [@seesmof](https://github.com/seesmof/)
-- [@seesmof](https://github.com/seesmof/)
+- [@Em4lia](https://github.com/Em4lia/)
 
 ## License
 
