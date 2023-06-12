@@ -1,7 +1,10 @@
+# main.py file are made by Maryakhin Roman
+
 from colorama import Fore, Back, Style
 from additional import get_neighbours, update_pole
 import random
 
+cycle = 0
 
 def print_pole(pole, count):
     if count == 0:
@@ -20,7 +23,7 @@ def print_pole(pole, count):
 
 
 def inputValues(size):
-    # Shared Function, made together with Roman
+    # Shared Function, made together
 
     pole = []
     if input("   1 - ручний\n   2 - автоматичний\nВиберіть метод введення: ") == "1":
@@ -31,12 +34,15 @@ def inputValues(size):
             print("  -> ", end="")
             ryad = list(map(int, input().split()))
             pole.append(ryad)
+
+    # -------- Onyshchenko Oleh part
     else:
+        
         pole = [[random.choice([1, 0])
                  for _ in range(size)] for _ in range(size)]
-    
-    return pole
 
+    return pole
+    # --------
 
 def start_game():
     global cycle
