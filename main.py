@@ -3,6 +3,21 @@ from additional import get_neighbours, update_pole
 
 cycle = 0
 
+def print_pole(pole, count):
+    if count == 0:
+        print("\n  ╔═ Початкове поле:")
+    else:
+        print(f"  ╔═ Крок {count}:")
+    for row in pole:
+        print("  ║ ", end="")
+        for cell in row:
+            if cell == 1:
+                print("🔴 ", end="")
+            else:
+                print("  ", end="")
+        print()
+    print("  ╚═", end="")
+
 def start_game():
     global cycle
     count = 0
