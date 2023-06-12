@@ -14,7 +14,6 @@ def get_neighbours(pole, row, col):
             count += 1
     return count
 
-
 def update_pole(pole):
     global cycle
     new_pole = []
