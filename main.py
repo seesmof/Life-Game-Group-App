@@ -2,8 +2,6 @@ from colorama import Fore, Back, Style
 from additional import get_neighbours, update_pole
 import random
 
-cycle = 0
-
 
 def print_pole(pole, count):
     if count == 0:
