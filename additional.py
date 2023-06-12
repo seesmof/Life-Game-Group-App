@@ -1,5 +1,8 @@
 # Both function are made by Onyshchenko Oleh
 
+cycle = 0
+
+
 def get_neighbours(pole, row, col):
     rows = len(pole)
     cols = len(pole[0])
@@ -13,6 +16,7 @@ def get_neighbours(pole, row, col):
         if 0 <= offset_row < rows and 0 <= offset_col < cols and pole[offset_row][offset_col] == 1:
             count += 1
     return count
+
 
 def update_pole(pole):
     global cycle

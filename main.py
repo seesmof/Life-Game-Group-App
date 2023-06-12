@@ -1,5 +1,6 @@
 from colorama import Fore, Back, Style
-from additional import get_neighbours, update_pole, inputValues
+from additional import get_neighbours, update_pole
+import random
 
 cycle = 0
 
@@ -20,24 +21,23 @@ def print_pole(pole, count):
     print("  ╚═", end="")
 
 
-<<<<<<< HEAD
 def inputValues(size):
     pole = []
     if input("   1 - ручний\n   2 - автоматичний\nВиберіть метод введення: ") == "1":
-        print(f"  => Введіть початкову конфігурацію поля {size}x{size} (1 - жива клітина, 0 - мертва клітина):")
+        print(
+            f"  => Введіть початкову конфігурацію поля {size}x{size} (1 - жива клітина, 0 - мертва клітина):")
         pole = []
         for i in range(size):
             print("  -> ", end="")
             ryad = list(map(int, input().split()))
             pole.append(ryad)
     else:
-        pass #
+        pole = [[random.choice([1, 0])
+                 for _ in range(size)] for _ in range(size)]
 
     return pole
 
 
-=======
->>>>>>> 51bbbc3722f32259a55e3fc36c48a502182f678b
 def start_game():
     global cycle
     count = 0
@@ -52,11 +52,6 @@ def start_game():
     \033[0m""" + Fore.RESET)
 
     size = int(input("  =───────> Введіть розмір поля: "))
-<<<<<<< HEAD
-=======
-    print(
-        f"  => Введіть початкову конфігурацію поля {size}x{size} (1 - жива клітина, 0 - мертва клітина):")
->>>>>>> 51bbbc3722f32259a55e3fc36c48a502182f678b
 
     pole = inputValues(size)
 
