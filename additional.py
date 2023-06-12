@@ -1,3 +1,5 @@
+# Both function are made by Onyshchenko Oleh
+
 def get_neighbours(pole, row, col):
     rows = len(pole)
     cols = len(pole[0])
