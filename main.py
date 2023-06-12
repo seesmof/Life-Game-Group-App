@@ -5,7 +5,6 @@ import random
 
 cycle = 0
 
-
 def get_neighbours(pole, row, col):
     rows = len(pole)
     cols = len(pole[0])
@@ -46,7 +45,6 @@ def update_pole(pole):
         new_pole.append(new_row)
     return new_pole
 
-
 def print_pole(pole, count):
     if count == 0:
         print("\n  ╔═ Початкове поле:")
@@ -78,13 +76,12 @@ def inputValues(size):
 
     # -------- Onyshchenko Oleh part
     else:
-
+        
         pole = [[random.choice([1, 0])
                  for _ in range(size)] for _ in range(size)]
 
     return pole
     # --------
-
 
 def start_game():
     global cycle
