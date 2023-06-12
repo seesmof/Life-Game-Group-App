@@ -1,5 +1,5 @@
 from colorama import Fore, Back, Style
-from additional import get_neighbours, update_pole
+from additional import get_neighbours, update_pole, inputValues
 
 cycle = 0
 
@@ -18,6 +18,22 @@ def print_pole(pole, count):
         print()
     print("  ╚═", end="")
 
+
+def inputValues(size):
+    pole = []
+    if input("   1 - ручний\n   2 - автоматичний\nВиберіть метод введення: ") == "1":
+        print(f"  => Введіть початкову конфігурацію поля {size}x{size} (1 - жива клітина, 0 - мертва клітина):")
+        pole = []
+        for i in range(size):
+            print("  -> ", end="")
+            ryad = list(map(int, input().split()))
+            pole.append(ryad)
+    else:
+        pass #
+
+    return pole
+
+
 def start_game():
     global cycle
     count = 0
@@ -32,14 +48,8 @@ def start_game():
     \033[0m""" + Fore.RESET)
 
     size = int(input("  =───────> Введіть розмір поля: "))
-    print(f"  => Введіть початкову конфігурацію поля {size}x{size} (1 - жива клітина, 0 - мертва клітина):")
 
-    pole = []
-
-    for i in range(size):
-        print("  -> ", end="")
-        ryad = list(map(int, input().split()))
-        pole.append(ryad)
+    pole = inputValues(size)
 
     print_pole(pole, count)
     print(' Для наступного кроку натисніть Enter. Для виходу введіть "0"')
