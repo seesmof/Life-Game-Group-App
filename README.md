@@ -23,6 +23,7 @@ This repository contains a solution to the final task in the Soft Skills discipl
 ## Authors
 
 - [@seesmof](https://github.com/seesmof/)
+- [@seesmof](https://github.com/seesmof/)
 
 ## License
 
