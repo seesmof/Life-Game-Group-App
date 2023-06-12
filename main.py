@@ -20,6 +20,8 @@ def print_pole(pole, count):
 
 
 def inputValues(size):
+    # Shared Function, made together with Roman
+
     pole = []
     if input("   1 - ручний\n   2 - автоматичний\nВиберіть метод введення: ") == "1":
         print(
@@ -32,7 +34,7 @@ def inputValues(size):
     else:
         pole = [[random.choice([1, 0])
                  for _ in range(size)] for _ in range(size)]
-
+    
     return pole
 
 
